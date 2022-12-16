@@ -1,0 +1,47 @@
+.headline {
+    margin-top: 12vh;
+    width: 90vw;
+    padding: 0 10px;
+}
+
+.headline h1 {
+    font-size: 32px;
+}
+
+.headline p {
+    line-height: 24px;
+}
+
+.set-up ul {
+    list-style: square;
+}
+
+.set-up li {
+    margin-bottom: 30px;
+    display: grid;
+}
+
+.batch-call {
+    color: red;
+}
+
+.batch-address {
+    color: darkslateblue;
+}
+
+.batch-version {
+    color: firebrick;
+}
+
+code {
+    padding: 8px 12px;
+}
+
+@media only screen and (min-width: 600px) {
+    .headline {
+        display: grid;
+        width: 100vw;
+        grid-template-columns: 0.6fr;
+        justify-content: center;
+    }
+}

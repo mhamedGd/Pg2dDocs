@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground 2D Example</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="style/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="style/example.css" rel="stylesheet" type="text/css" media="all">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <script src="./scripts/script.js" defer></script>
+    <link rel="stylesheet" href="deps/Google Code Prettify Themes/github-v2.css">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js" defer></script>
+</head>
+<body>
+    <section class="description">
+        <h2>Simple Example</h2>
+        <hr>
+        <p>This example will show you how to write a simple application that display a rotating outline square in the middle of the screen,
+             It's important to mention that every Playground2D Application starts by creating a world. The world accepts layers or how I named
+            them "Scenes", The world creates a window for you in which you provide a struct that contains the properties of the window (width, height etc...).
+        </p>
+        <hr>
+        <pre class="prettyprint code-block">
+            #define PLAYGROUND_2D
+
+            #include &lt;Playground2D.h&gt;
+            #include &lt;glm/glm.hpp&gt;
+
+            using namespace pg2D;
+
+            class RotatingSquare : public Scene {
+            public:
+                RotatingSquare(const std::string& sceneName) : Scene(sceneName) {}
+                ~RotatingSquare() {}
+
+                virtual void OnStart() override {
+                    m_Camera = Camera2D(ownerWorld->GetWindow());
+                }
+
+                float angle = 0.0f;
+                virtual void OnUpdate() override {
+                    m_Camera.Update();
+
+                    angle += m_DeltaTime.GetMilliseconds() / 4;
+                }
+
+                virtual void OnDraw() override {
+                    static RGBA8 color = { 255, 255, 255, 255 };
+                    m_ShapeBatch.DrawBox(glm::vec2(0.0f), glm::vec2(32.0f), color, angle);
+
+                    m_ShapeBatch.Render(m_Camera, 1.0f);
+                }
+
+                virtual void OnEvent(Event& e) override {
+
+                }
+
+            private:
+                Camera2D m_Camera;
+
+                ShapeBatch m_ShapeBatch;
+            };
+
+            int main() {
+                WindowProperties windowProps = { 1366, 768, "Rotating Square", WindowConfigurations::UNRESIZABLE };
+                World world(windowProps);
+
+                world.GetScenesList()->RegisterScene(new RotatingSquare("Rotating Square"));
+                world.AddScene("Rotating Square");
+
+                world.Run();
+                return 0;
+            }
+        </pre>
+        <hr>
+        <div class="after-code">
+            <h2>Results</h2>
+            <div class="center-content"><img src="./assets/rotating_square.gif" alt="Rotating Square Result"></div>
+        </div>
+        <hr>
+        <div class="after-code">
+            <h2>Steps</h2>
+            <ul>
+                <li>Define "PLAYGROUND_2D", This defines a necessary macro inside the framework in order for OpenGL to be initiated.</li>
+                <li>Include &lt;Playground2D.h&gt; and &lt;glm/glm.hpp&gt;.</li>
+                <li>Create a class that is a public sub-class of "Scene".</li>
+                <li>Inherit the constructer of "Scene" and assign the paramter "sceneName" to its constructer.</li>
+                <li>You have 4 functions that you can override in Scene, for this example we'll only need 3 of them.</li>
+                <li>Create a Camera2D object and assign it as per its constructor in the "OnStart" overridden method.</li>
+                <li>Don't forget to update Camera2D in "OnUpdate".</li>
+                <li>Create a ShapeBatch object.</li>
+                <li>Create a float that represents the angle of the box and increment it constantly with DeltaTime.</li>
+                <li>Create a RGBA8 struct that will the box color.</li>
+                <li>You can now draw the box with the DrawBox method in the Shape Batch object, The first parameter is the position, The second is the dimensions, The third is the color, and the fourth is the angle.</li>
+                <li>Render the Shape Batch object by calling the method and passing on which camera do you want to render this object on and the line width.</li>
+                <li>Inside "int main()" create a WindowProperties struct that takes in the width, height, label, and configurations of the window.</li>
+                <li>Create a world and assign the window properties to it.</li>
+                <li>Register the scene in the scenes list.</li>
+                <li>Add the scene to the world.</li>
+                <li>Run the world</li>
+            </ul>
+        </div>
+        <div class="last-button-container">
+            <a class="last-button" href="#">Documentation</a>
+        </div>
+    </section>
+</body>
+</html>

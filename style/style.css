@@ -1,0 +1,103 @@
+:root {
+    --transition-time: 0.25s;
+    --link-color: rgb(123, 166, 180);
+    --lato: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: content-box;
+    padding-bottom: 100px;
+    font-family: var(--lato);
+}
+
+a {
+    text-decoration: none;
+    padding: 2px 4px;
+    color: var(--link-color);
+    font-family: sans-serif;
+    transition: var(--transition-time);
+}
+
+a:hover {
+    color: lightblue;
+}
+
+.code-block {
+    padding: 8px 10px;
+    overflow: scroll;
+}
+
+.center-content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-container {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 50px;
+    background: white;
+    box-shadow: 0 2.5px 8px var(--link-color);
+}
+
+.navbar-item {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-link {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+
+.navbar-button {
+    background: none;
+    border: none;
+}
+
+.burger-line {
+    width: 25px;
+    height: 3px;
+    background: black;
+}
+
+.last-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.last-button {
+    text-decoration: none;
+    color: var(--link-color);
+    padding: 8px 12px;
+    border: 2px solid var(--link-color);
+    transition: var(--transition-time);
+}
+
+.last-button:hover {
+    color: white;
+    background: var(--link-color);
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-container {
+        height: 60px;
+    }
+
+    .navbar-item {
+        padding: 10px 35px;
+    }
+}

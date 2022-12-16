@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground 2D</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="style/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="style/index.css" rel="stylesheet" type="text/css" media="all">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <script src="./scripts/script.js" defer></script>
+    <link rel="stylesheet" href="deps/Google Code Prettify Themes/github-v2.css">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js" defer></script>
+  </head>
+  <body>
+    <section class="headline">
+      <h1>Playground 2D</h1>
+      <h3>Welcome to the official documentation for the Playground2D Framework!</h3>
+      <p>Playground2D was written originally as a learning experience and to be used as a learning tool, to perform algorithms in a visual manner. I wrote Playground2D with minimum knowledge in writing a framework and a small experience with graphics programming. I originally intended to only create it for the sake of learning but I thought why not share it as a milestone to look back for in the future.</p>
+      <h5>
+        <b>THIS LIBRARY ONLY WORKS FOR WINDOWS</b>
+      </h5>
+      <section class="set-up">
+        <h2>Installation</h2>
+        <ul>
+          <li>
+            <div>
+              <h3>Clone The Repository</h3>
+              <p>
+                You can find the repository in <a href="https://github.com/mhamedGd/Playground2D">Github</a>.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Run GenerateSandbox.bat</h3>
+              <p>
+                The file generates a VisualStudio 2019 solution file. If you have the vs2019 build tools then you can convert it to your version, if not then you can modify the first line of the ".bat" file from:
+              </p>
+              <code><span class="batch-call">call</span> <span class="batch-address">premake\premake5.exe</span> <span class="batch-version">vs2019</span></code>
+              <p>to:</p>
+              <code><span class="batch-call">call</span> <span class="batch-address">premake\premake5.exe</span> <span class="batch-version">vs[YOUR VERSION]</span></code>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Open The Solution</h3>
+              <p>
+                The batch file will create a (.sln) file that you can open and compile. There are 2 projects in the solution file. One for the framework named "Playground2D", The other named "Sandbox" where you can experiment. There is already an example included.
+              </p>
+            </div>
+          </li>
+        </ul>
+        <div class="last-button-container">
+          <a class="last-button" href="./example.html">See an Example</a>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>
