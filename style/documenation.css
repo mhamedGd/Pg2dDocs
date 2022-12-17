@@ -1,0 +1,21 @@
+.documentation {
+    display: grid;
+    margin-top: 10vh;
+    width: 100vw;
+    grid-template-columns: 0.8fr;
+    justify-content: center;
+}
+
+.functions {
+    margin-bottom: 60px;
+}
+
+.function {
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 600px) {
+    .documentation {
+        grid-template-columns: 0.6fr;
+    }
+}
