@@ -24,9 +24,15 @@ a:hover {
     color: lightblue;
 }
 
+hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid black;
+}
+
 .code-block {
     padding: 8px 10px;
-    overflow: scroll;
+    overflow-x: scroll;
 }
 
 .center-content {
@@ -75,8 +81,7 @@ a:hover {
 
 .last-button-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .last-button {

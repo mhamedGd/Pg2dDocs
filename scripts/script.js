@@ -46,3 +46,7 @@ function CreateNavBar(){
 }
 
 CreateNavBar();
+
+function GetDocumentation() {
+    localStorage.setItem('DocIndex', JSON.stringify(0));
+}

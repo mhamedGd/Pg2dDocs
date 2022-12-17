@@ -1,9 +1,3 @@
-hr {
-    width: 100%;
-    border: none;
-    border-top: 1px solid black;
-}
-
 .description {
     display: grid;
     margin-top: 10vh;
@@ -47,11 +41,6 @@ hr {
 @media only screen and (min-width: 600px) {
     .description {
         grid-template-columns: 0.6fr;
-    }
-
-    .code-block {
-        width: 100%;
-        overflow:visible;
     }
 
     .after-code img {
