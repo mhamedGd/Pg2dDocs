@@ -629,128 +629,128 @@ const DOCUMENTATION = [
             {
                 function_code:
                 `
-                PG_KEY_SPACE              /* Space */
-                PG_KEY_APOSTROPHE         /* ' */
-                PG_KEY_COMMA              /* , */
-                PG_KEY_MINUS              /* - */
-                PG_KEY_PERIOD             /* . */
-                PG_KEY_SLASH              /* / */
-                PG_KEY_0                  /* 0 */
-                PG_KEY_1                  /* 1 */
-                PG_KEY_2                  /* 2 */
-                PG_KEY_3                  /* 3 */
-                PG_KEY_4                  /* 4 */
-                PG_KEY_5                  /* 5 */
-                PG_KEY_6                  /* 6 */
-                PG_KEY_7                  /* 7 */
-                PG_KEY_8                  /* 8 */
-                PG_KEY_9                  /* 9 */
-                PG_KEY_SEMICOLON          /* ; */
-                PG_KEY_EQUAL              /* = */
-                PG_KEY_A                  /* A */
-                PG_KEY_B                  /* B */
-                PG_KEY_C                  /* C */
-                PG_KEY_D                  /* D */
-                PG_KEY_E                  /* E */
-                PG_KEY_F                  /* F */
-                PG_KEY_G                  /* G */
-                PG_KEY_H                  /* H */
-                PG_KEY_I                  /* I */
-                PG_KEY_J                  /* J */
-                PG_KEY_K                  /* K */
-                PG_KEY_L                  /* L */
-                PG_KEY_M                  /* M */
-                PG_KEY_N                  /* N */
-                PG_KEY_O                  /* O */
-                PG_KEY_P                  /* P */
-                PG_KEY_Q                  /* Q */
-                PG_KEY_R                  /* R */
-                PG_KEY_S                  /* S */
-                PG_KEY_T                  /* T */
-                PG_KEY_U                  /* U */
-                PG_KEY_V                  /* V */
-                PG_KEY_W                  /* W */
-                PG_KEY_X                  /* X */
-                PG_KEY_Y                  /* Y */
-                PG_KEY_Z                  /* Z */
-                PG_KEY_LEFT_BRACKET       /* [ */
-                PG_KEY_BACKSLASH          /* \\ */
-                PG_KEY_RIGHT_BRACKET      /* ] */
-                PG_KEY_GRAVE_ACCENT       /* \`  */
-                PG_KEY_WORLD_1            /* non-US #1 */
-                PG_KEY_WORLD_2            /* non-US #2 */
+    PG_KEY_SPACE              /* Space */
+    PG_KEY_APOSTROPHE         /* ' */
+    PG_KEY_COMMA              /* , */
+    PG_KEY_MINUS              /* - */
+    PG_KEY_PERIOD             /* . */
+    PG_KEY_SLASH              /* / */
+    PG_KEY_0                  /* 0 */
+    PG_KEY_1                  /* 1 */
+    PG_KEY_2                  /* 2 */
+    PG_KEY_3                  /* 3 */
+    PG_KEY_4                  /* 4 */
+    PG_KEY_5                  /* 5 */
+    PG_KEY_6                  /* 6 */
+    PG_KEY_7                  /* 7 */
+    PG_KEY_8                  /* 8 */
+    PG_KEY_9                  /* 9 */
+    PG_KEY_SEMICOLON          /* ; */
+    PG_KEY_EQUAL              /* = */
+    PG_KEY_A                  /* A */
+    PG_KEY_B                  /* B */
+    PG_KEY_C                  /* C */
+    PG_KEY_D                  /* D */
+    PG_KEY_E                  /* E */
+    PG_KEY_F                  /* F */
+    PG_KEY_G                  /* G */
+    PG_KEY_H                  /* H */
+    PG_KEY_I                  /* I */
+    PG_KEY_J                  /* J */
+    PG_KEY_K                  /* K */
+    PG_KEY_L                  /* L */
+    PG_KEY_M                  /* M */
+    PG_KEY_N                  /* N */
+    PG_KEY_O                  /* O */
+    PG_KEY_P                  /* P */
+    PG_KEY_Q                  /* Q */
+    PG_KEY_R                  /* R */
+    PG_KEY_S                  /* S */
+    PG_KEY_T                  /* T */
+    PG_KEY_U                  /* U */
+    PG_KEY_V                  /* V */
+    PG_KEY_W                  /* W */
+    PG_KEY_X                  /* X */
+    PG_KEY_Y                  /* Y */
+    PG_KEY_Z                  /* Z */
+    PG_KEY_LEFT_BRACKET       /* [ */
+    PG_KEY_BACKSLASH          /* \\ */
+    PG_KEY_RIGHT_BRACKET      /* ] */
+    PG_KEY_GRAVE_ACCENT       /* \`  */
+    PG_KEY_WORLD_1            /* non-US #1 */
+    PG_KEY_WORLD_2            /* non-US #2 */
 
 
-                PG_KEY_ESCAPE             /* Esc */
-                PG_KEY_ENTER              /* Enter */
-                PG_KEY_TAB                /* Tap */
-                PG_KEY_BACKSPACE          /* Backspace */
-                PG_KEY_INSERT             /* Insert */
-                PG_KEY_DELETE             /* Delete */
-                PG_KEY_RIGHT              /* Right Arrow */
-                PG_KEY_LEFT               /* Left Arrow */
-                PG_KEY_DOWN               /* Down Arrow */
-                PG_KEY_UP                 /* Up Arrow */
-                PG_KEY_PAGE_UP            /* Page up */
-                PG_KEY_PAGE_DOWN          /* Page down */
-                PG_KEY_HOME               /* Home */
-                PG_KEY_END                /* End */
-                PG_KEY_CAPS_LOCK          /* Caps-Lock */
-                PG_KEY_SCROLL_LOCK        /* Scroll-Lock */
-                PG_KEY_NUM_LOCK           /* Num-Lock */
-                PG_KEY_PRINT_SCREEN       /* Print-Screen */
-                PG_KEY_PAUSE              /* Pause */
-                PG_KEY_F1                 /* F1 */
-                PG_KEY_F2                 /* F2 */
-                PG_KEY_F3                 /* F3 */
-                PG_KEY_F4                 /* F4 */
-                PG_KEY_F5                 /* F5 */
-                PG_KEY_F6                 /* F6 */
-                PG_KEY_F7                 /* F7 */
-                PG_KEY_F8                 /* F8 */
-                PG_KEY_F9                 /* F9 */
-                PG_KEY_F10                /* F10 */
-                PG_KEY_F11                /* F11 */
-                PG_KEY_F12                /* F12 */
-                PG_KEY_F13                /* F13 */
-                PG_KEY_F14                /* F14 */
-                PG_KEY_F15                /* F15 */
-                PG_KEY_F16                /* F16 */
-                PG_KEY_F17                /* F17 */
-                PG_KEY_F18                /* F18 */
-                PG_KEY_F19                /* F19 */
-                PG_KEY_F20                /* F20 */
-                PG_KEY_F21                /* F21 */
-                PG_KEY_F22                /* F22 */
-                PG_KEY_F23                /* F23 */
-                PG_KEY_F24                /* F24 */
-                PG_KEY_F25                /* F25 */
-                PG_KEY_KP_0               /* Keypad 0 */
-                PG_KEY_KP_1               /* Keypad 1 */
-                PG_KEY_KP_2               /* Keypad 2 */
-                PG_KEY_KP_3               /* Keypad 3 */
-                PG_KEY_KP_4               /* Keypad 4 */
-                PG_KEY_KP_5               /* Keypad 5 */
-                PG_KEY_KP_6               /* Keypad 6 */
-                PG_KEY_KP_7               /* Keypad 7 */
-                PG_KEY_KP_8               /* Keypad 8 */
-                PG_KEY_KP_9               /* Keypad 9 */
-                PG_KEY_KP_DECIMAL         /* Keypad . */
-                PG_KEY_KP_DIVIDE          /* Keypad / */
-                PG_KEY_KP_MULTIPLY        /* Keypad * */
-                PG_KEY_KP_SUBTRACT        /* Keypad - */
-                PG_KEY_KP_ADD             /* Keypad + */
-                PG_KEY_KP_ENTER           /* Keypad Enter */
-                PG_KEY_KP_EQUAL           /* Keypad = */
-                PG_KEY_LEFT_SHIFT         /* Left Shift */
-                PG_KEY_LEFT_CONTROL       /* Left Control */
-                PG_KEY_LEFT_ALT           /* Left Alt */
-                PG_KEY_LEFT_SUPER         /* Left Window/Command Key */
-                PG_KEY_RIGHT_SHIFT        /* Right Shift */
-                PG_KEY_RIGHT_CONTROL      /* Right Control */
-                PG_KEY_RIGHT_ALT          /* Right Alt */
-                PG_KEY_RIGHT_SUPER        /* Right Window/Command Key */
-                PG_KEY_MENU               /* Key Menu */
+    PG_KEY_ESCAPE             /* Esc */
+    PG_KEY_ENTER              /* Enter */
+    PG_KEY_TAB                /* Tap */
+    PG_KEY_BACKSPACE          /* Backspace */
+    PG_KEY_INSERT             /* Insert */
+    PG_KEY_DELETE             /* Delete */
+    PG_KEY_RIGHT              /* Right Arrow */
+    PG_KEY_LEFT               /* Left Arrow */
+    PG_KEY_DOWN               /* Down Arrow */
+    PG_KEY_UP                 /* Up Arrow */
+    PG_KEY_PAGE_UP            /* Page up */
+    PG_KEY_PAGE_DOWN          /* Page down */
+    PG_KEY_HOME               /* Home */
+    PG_KEY_END                /* End */
+    PG_KEY_CAPS_LOCK          /* Caps-Lock */
+    PG_KEY_SCROLL_LOCK        /* Scroll-Lock */
+    PG_KEY_NUM_LOCK           /* Num-Lock */
+    PG_KEY_PRINT_SCREEN       /* Print-Screen */
+    PG_KEY_PAUSE              /* Pause */
+    PG_KEY_F1                 /* F1 */
+    PG_KEY_F2                 /* F2 */
+    PG_KEY_F3                 /* F3 */
+    PG_KEY_F4                 /* F4 */
+    PG_KEY_F5                 /* F5 */
+    PG_KEY_F6                 /* F6 */
+    PG_KEY_F7                 /* F7 */
+    PG_KEY_F8                 /* F8 */
+    PG_KEY_F9                 /* F9 */
+    PG_KEY_F10                /* F10 */
+    PG_KEY_F11                /* F11 */
+    PG_KEY_F12                /* F12 */
+    PG_KEY_F13                /* F13 */
+    PG_KEY_F14                /* F14 */
+    PG_KEY_F15                /* F15 */
+    PG_KEY_F16                /* F16 */
+    PG_KEY_F17                /* F17 */
+    PG_KEY_F18                /* F18 */
+    PG_KEY_F19                /* F19 */
+    PG_KEY_F20                /* F20 */
+    PG_KEY_F21                /* F21 */
+    PG_KEY_F22                /* F22 */
+    PG_KEY_F23                /* F23 */
+    PG_KEY_F24                /* F24 */
+    PG_KEY_F25                /* F25 */
+    PG_KEY_KP_0               /* Keypad 0 */
+    PG_KEY_KP_1               /* Keypad 1 */
+    PG_KEY_KP_2               /* Keypad 2 */
+    PG_KEY_KP_3               /* Keypad 3 */
+    PG_KEY_KP_4               /* Keypad 4 */
+    PG_KEY_KP_5               /* Keypad 5 */
+    PG_KEY_KP_6               /* Keypad 6 */
+    PG_KEY_KP_7               /* Keypad 7 */
+    PG_KEY_KP_8               /* Keypad 8 */
+    PG_KEY_KP_9               /* Keypad 9 */
+    PG_KEY_KP_DECIMAL         /* Keypad . */
+    PG_KEY_KP_DIVIDE          /* Keypad / */
+    PG_KEY_KP_MULTIPLY        /* Keypad * */
+    PG_KEY_KP_SUBTRACT        /* Keypad - */
+    PG_KEY_KP_ADD             /* Keypad + */
+    PG_KEY_KP_ENTER           /* Keypad Enter */
+    PG_KEY_KP_EQUAL           /* Keypad = */
+    PG_KEY_LEFT_SHIFT         /* Left Shift */
+    PG_KEY_LEFT_CONTROL       /* Left Control */
+    PG_KEY_LEFT_ALT           /* Left Alt */
+    PG_KEY_LEFT_SUPER         /* Left Window/Command Key */
+    PG_KEY_RIGHT_SHIFT        /* Right Shift */
+    PG_KEY_RIGHT_CONTROL      /* Right Control */
+    PG_KEY_RIGHT_ALT          /* Right Alt */
+    PG_KEY_RIGHT_SUPER        /* Right Window/Command Key */
+    PG_KEY_MENU               /* Key Menu */
                 `,
                 function_parameters: [
                     
@@ -760,18 +760,18 @@ const DOCUMENTATION = [
             {
                 function_code:
                 `
-                PG_MOUSE_BUTTON_1         /* Mouse Button 0 */
-                PG_MOUSE_BUTTON_2         /* Mouse Button 1 */
-                PG_MOUSE_BUTTON_3         /* Mouse Button 2 */
-                PG_MOUSE_BUTTON_4         /* Mouse Button 3 */
-                PG_MOUSE_BUTTON_5         /* Mouse Button 4 */
-                PG_MOUSE_BUTTON_6         /* Mouse Button 5 */
-                PG_MOUSE_BUTTON_7         /* Mouse Button 6 */
-                PG_MOUSE_BUTTON_8         /* Mouse Button 7 */
-                PG_MOUSE_BUTTON_LAST      /* Last Mouse Button   (8) */
-                PG_MOUSE_BUTTON_LEFT      /* Left Mouse Button   (1) */
-                PG_MOUSE_BUTTON_RIGHT     /* Right Mouse Button  (2) */
-                PG_MOUSE_BUTTON_MIDDLE    /* Middle Mouse Button (3) */
+    PG_MOUSE_BUTTON_1         /* Mouse Button 0 */
+    PG_MOUSE_BUTTON_2         /* Mouse Button 1 */
+    PG_MOUSE_BUTTON_3         /* Mouse Button 2 */
+    PG_MOUSE_BUTTON_4         /* Mouse Button 3 */
+    PG_MOUSE_BUTTON_5         /* Mouse Button 4 */
+    PG_MOUSE_BUTTON_6         /* Mouse Button 5 */
+    PG_MOUSE_BUTTON_7         /* Mouse Button 6 */
+    PG_MOUSE_BUTTON_8         /* Mouse Button 7 */
+    PG_MOUSE_BUTTON_LAST      /* Last Mouse Button   (8) */
+    PG_MOUSE_BUTTON_LEFT      /* Left Mouse Button   (1) */
+    PG_MOUSE_BUTTON_RIGHT     /* Right Mouse Button  (2) */
+    PG_MOUSE_BUTTON_MIDDLE    /* Middle Mouse Button (3) */
                 `,
                 function_parameters: [
                     
@@ -1085,6 +1085,185 @@ const DOCUMENTATION = [
         ]
     },
     /* -------------------------------- */
+    /* SpriteBatch -------------------- */
+    {
+        class: 'SpriteBatch',
+        description: "A Render Batch Class that allows the user to render images to the world. It is mainly built with the intent of minimizing draw calls as much as possible.",
+        class_code: 'class SpriteBatch(const std::string& shaderPath = "Assets/default.shader")',
+        functions: [
+            {
+                function_code: 'void DrawSpriteLeftBottom(const glm::vec2& pos, const glm::vec2& dimensions, const glm::vec4 uvRect, GLuint textureID, RGBA8 color)',
+                function_parameters: [
+                    "const glm::vec2& pos : Bottom left position of the sprite.",
+                    "const glm::vec2& dimensions : Dimensions of the sprite.",
+                    "const glm::vec4 uvRect : UV Coordinates of the sprite.",
+                    "GLuint textureID : Texture ID that the sprite will display.",
+                    "RGBA8 color : Sprite tint color."
+                ],
+                function_description: "Draw A Sprite in the world that starts from the bottom left."
+            },
+            {
+                function_code: 'void DrawSprite(const glm::vec2& pos, const glm::vec2& dimensions, const glm::vec4 uvRect, GLuint textureID, RGBA8 color)',
+                function_parameters: [
+                    "const glm::vec2& pos : Center-most position of the sprite.",
+                    "const glm::vec2& dimensions : Dimensions of the sprite.",
+                    "const glm::vec4 uvRect : UV Coordinates of the sprite.",
+                    "GLuint textureID : Texture ID that the sprite will display.",
+                    "RGBA8 color : Sprite tint color."
+                ],
+                function_description: "Draw A Sprite in the world that is pivoted at the center."
+            },
+            {
+                function_code: 'void DrawSprite(const glm::vec2& pos, const glm::vec2& dimensions, const glm::vec4 uvRect, GLuint textureID, RGBA8 color, float angle)',
+                function_parameters: [
+                    "const glm::vec2& pos : Center-most position of the sprite.",
+                    "const glm::vec2& dimensions : Dimensions of the sprite.",
+                    "const glm::vec4 uvRect : UV Coordinates of the sprite.",
+                    "GLuint textureID : Texture ID that the sprite will display.",
+                    "RGBA8 color : Sprite tint color.",
+                    "float angle : Sprite Angle."
+                ],
+                function_description: "Draw A Sprite in the world that is pivoted at the center with an angle."
+            },
+            {
+                function_code: 'void Render(Camera2D& camera)',
+                function_parameters: [
+                    "Camera2D& camera : The camera in which to render everything drawn so-far in this SpriteBatch object"
+                ],
+                function_description: "Render Everything that has been drawn in this SpriteBatch object, preferred if this function is called at the of every draw call belonging to this object."
+            },
+        ]
+    },
+    /* -------------------------------- */
+    /* Glyph -------------------------- */
+    {
+        class: 'Glyph',
+        description: "The rect that is mainly used by class SpriteBatch as a data holder for the drawing process.",
+        class_code: `
+        class Glyph(const glm::vec2& pos, const glm::vec2& dimensions, const glm::vec4& uv, GLuint _textureID, RGBA8 color, float _depth)
+        class Glyph(const glm::vec2& pos, const glm::vec2& dimensions, const glm::vec4& uv, GLuint _textureID, RGBA8 color, float _depth, float angle)
+        class Glyph(const glm::vec4& rect, const glm::vec4& uv, GLuint _textureID, RGBA8 color, float _depth)
+        
+        `,
+        functions: [
+            {
+                function_code: 'glm::vec2 RotatePoint(const glm::vec2& originalPoint, float angleInDegrees)',
+                function_parameters: [
+                    "const glm::vec2& originalPoint : The 2D point you want to rotate.",
+                    "float angleInDegrees : The angle you want the 2D point rotated towards."
+                ],
+                function_description: "Rotate a 2D Point in space to a certain angle."
+            },
+        ]
+    },
+    /* -------------------------------- */
+    /* ShapeBatch --------------------- */
+    {
+        class: 'RenderBatch',
+        description: "A Render Batch Class that allows the user to render shapes to the world. It is mainly built with the intent of minimizing draw calls as much as possible.",
+        class_code: "class RenderBatch(GLuint _offset, GLuint _numVerts, GLuint _textureID)",
+        functions: [
+        ]
+    },
+    /* -------------------------------- */
+    /* Glyph -------------------------- */
+    {
+        class: 'ShapeBatch',
+        description: "The rect that is mainly used by class SpriteBatch as a data holder for the drawing process.",
+        class_code: "class ShapeBatch",
+        functions: [
+            {
+                function_code: 'void DrawLine(const glm::vec2& startPos, const glm::vec2& targetPos, RGBA8 color)',
+                function_parameters: [
+                    "const glm::vec2& startPos : Line start position.",
+                    "const glm::vec2& targetPos : Line end position.",
+                    "RGBA8 color : Line color."
+                ],
+                function_description: "Draw a line from Point A to Point B with a color."
+            },
+            {
+                function_code: 'void DrawBox(const glm::vec2& origin, const glm::vec2& dimensions, RGBA8 color)',
+                function_parameters: [
+                    "const glm::vec2& origin : Rect center position.",
+                    "const glm::vec2& dimensions : Rect dimensions.",
+                    "RGBA8 color : Rect line color."
+                ],
+                function_description: "Draw an outline rect at a specific position with specific dimensions and line color."
+            },
+            {
+                function_code: 'void DrawBox(const glm::vec2& origin, const glm::vec2& dimensions, RGBA8 color, float angleInDegrees)',
+                function_parameters: [
+                    "const glm::vec2& origin : Rect center position.",
+                    "const glm::vec2& dimensions : Rect dimensions.",
+                    "RGBA8 color : Rect line color.",
+                    "float angleInDegrees : Rect angle."
+                ],
+                function_description: "Draw an outline rect at a specific position with specific dimensions, line color, and an angle."
+            },
+            {
+                function_code: 'void DrawCirlce(const glm::vec2& center, float radius, RGBA8 color)',
+                function_parameters: [
+                    "const glm::vec2& center : Circle center position.",
+                    "float radius : Circle radius.",
+                    "RGBA8 color : Circle line color."
+                ],
+                function_description: "Draw an outline circle at a specific position with specific a radius and line color."
+            },
+            {
+                function_code: 'void Render(Camera2D& m_Camera, float lineWidth)',
+                function_parameters: [
+                    "Camera2D& m_Camera : The camera to render the shapes that had been draw in this object to.",
+                    "float lineWidth : The line width of all shapes drawn in this object."
+                ],
+                function_description: "Render everything that has been drawn using this object, Preferred if used after all Draw calls used with this object."
+            },
+        ]
+    },
+    /* -------------------------------- */
+    /* FontBatch ---------------------- */
+    {
+        class: 'FontBatch',
+        description: "A Wrapper class around SpriteBatch that decodes (.ttf) font types and draws them in the world.",
+        class_code: "class FontBatch(const std::string& fontPath, const FontBatchSettings& fontBatchSettings = { 32.0f, 32.0f })",
+        functions: [
+            {
+                function_code: 'void DrawString(const std::string& text, glm::vec2 pos, float scale, const RGBA8& color)',
+                function_parameters: [
+                    "const std::string& text : Text you want to draw. P.S: use '\\n' to add a new line.",
+                    "glm::vec2 pos : Left-most position of the text.",
+                    "float scale : Text scale, It can be used together with the font-size to set the size of the text on screen.",
+                    "const RGBA8& color : Text tint color."
+                ],
+                function_description: "Draw a string in the world."
+            },
+            {
+                function_code: 'void Render(Camera2D& camera)',
+                function_parameters: [
+                    "Camera2D& camera : The camera you want to render all strings drawn using this object to."
+                ],
+                function_description: "Render all strings drawn using this object, Preferred if used after all Draw calls used with this object."
+            },
+        ]
+    },
+    /* -------------------------------- */
+    /* FontBatchSettings -------------- */
+    {
+        class: 'FontBatchSettings',
+        description: "Properties of the decoded fonts, for now only (font size, line height).",
+        class_code: "struct FontBatchSettings { float fontSize; float lineHeight; }",
+        functions: [
+        ]
+    },
+    /* -------------------------------- */
+    /* CharGlyph -------------- */
+    {
+        class: 'CharGlyph',
+        description: "Settings struct that determine how to draw each character unto the screen, They're automatically assigned when first creating a FontBatch object.",
+        class_code: "struct CharGlyph { GLuint textureID; glm::ivec2 size; glm::ivec2 bearing; unsigned int advance; }",
+        functions: [
+        ]
+    },
+    /* -------------------------------- */
 ]
 
 function GetDocID(name) {
@@ -1124,7 +1303,8 @@ function FillInformation(info_object){
         FUNCTIONS.appendChild(FUNCTION);
 
         const FUNCTION_CODE = document.createElement('pre');
-        FUNCTION_CODE.classList.add('prettyprint', 'code-block');
+        FUNCTION_CODE.classList.add('code-block');
+        FUNCTION_CODE.classList.add('prettyprint');
         FUNCTION_CODE.textContent = info_object.functions[i].function_code;
         FUNCTION.appendChild(FUNCTION_CODE);
 
