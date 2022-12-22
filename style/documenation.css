@@ -19,4 +19,9 @@
     .documentation {
         grid-template-columns: 0.6fr;
     }
+
+    .function {
+        margin-bottom: 50px;
+        width:60vw;
+    }
 }

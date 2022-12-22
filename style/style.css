@@ -1,6 +1,7 @@
 :root {
     --transition-time: 0.25s;
     --link-color: rgb(123, 166, 180);
+    --hover-color: lightblue;
     --lato: 'Lato', sans-serif;
 }
 
@@ -12,6 +13,10 @@ body {
     font-family: var(--lato);
 }
 
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
 a {
     text-decoration: none;
     padding: 2px 4px;
@@ -21,7 +26,7 @@ a {
 }
 
 a:hover {
-    color: lightblue;
+    color: var(--hover-color);
 }
 
 hr {
@@ -71,12 +76,62 @@ hr {
 .navbar-button {
     background: none;
     border: none;
+    cursor: pointer;
+    visibility: visible;
+}
+
+.navbar-button span {
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+    transition: var(--transition-time);
+}
+
+.navbar-button.active span:nth-child(1) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      margin-top: 4px;
+}
+.navbar-button.active span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+}
+.navbar-button.active span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: -16px;
+}
+
+.navbar-button:hover > span {
+    background: var(--hover-color);
 }
 
 .burger-line {
     width: 25px;
     height: 3px;
     background: black;
+}
+
+.docs-menu {
+    transition: var(--transition-time);
+    position: fixed;
+    transform: translate(100vw, 0);
+}
+
+.docs-menu.active {
+    overflow-y: scroll;
+    display: block;
+    transform: translate(0, 0);
+    width: 100vw;
+    height: calc(100vh - 50px);
+    background: white;
+    border-left: 4px solid black;
+    top: 50px;
 }
 
 .last-button-container {
@@ -86,15 +141,15 @@ hr {
 
 .last-button {
     text-decoration: none;
-    color: var(--link-color);
+    color: var(--hover-color);
     padding: 8px 12px;
-    border: 2px solid var(--link-color);
+    border: 2px solid var(--hover-color);
     transition: var(--transition-time);
 }
 
 .last-button:hover {
     color: white;
-    background: var(--link-color);
+    background: var(--hover-color);
 }
 
 @media only screen and (min-width: 600px) {
@@ -104,5 +159,14 @@ hr {
 
     .navbar-item {
         padding: 10px 35px;
+    }
+
+    .docs-menu.active {
+        width: 407px;
+        height: calc(100vh - 60px);
+        background: white;
+        border-left: 3px solid black;
+        top: 60px;
+        right: 0;
     }
 }
