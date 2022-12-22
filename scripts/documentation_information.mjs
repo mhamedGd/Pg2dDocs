@@ -1,4 +1,4 @@
-const DOCUMENTATION = [
+export const DOCUMENTATION = [
     /* World -------------------------- */
     {
         class: 'World',
@@ -131,7 +131,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* WindowProperties --------------- */
     {        
-        class: 'WindowProperties',
+        class: 'Window Properties',
         description: 'Window displaying properties, for now it only handles width, height, label, and configurations.',
         class_code: 'struct WindowProperties { int width; int height; std::string label; WindowConfigurations WindowConfigurations }',
         functions: []
@@ -139,7 +139,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* WindowConfigurations ----------- */
     {
-        class: 'WindowConfigurations',
+        class: 'Window Configurations',
         description: 'Window configurations that decides i.e if the window is resizable or if it should be maximized on start.',
         class_code: `enum class WindowConfigurations
         {
@@ -227,7 +227,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* ScenesList --------------------- */
     {
-        class: 'ScenesList',
+        class: 'Scenes List',
         description: 'A wrapper around a vector of pointers of Scenes, It is used in the World class as way to keep track of scenes created so that you can add and remove them during run time.',
         class_code: 'class ScenesList(World* _ownerWorld)',
         functions: [
@@ -329,7 +329,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* HudCamera ---------------------- */
     {
-        class: 'HudCamera',
+        class: 'Hud Camera',
         description: 'A sub-class of the Camera2D, Mainly used for UI and Hud values.',
         class_code: 'class HudCamera(Window* window) : Camera2D(window)',
         functions: [
@@ -388,7 +388,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* WindowResizeEvent -------------- */
     {
-        class: 'WindowResizeEvent',
+        class: 'Window Resize Event',
         description: 'An Event that gets called whenever the window gets resized.',
         class_code: 'class WindowResizeEvent(unsigned int width, unsigned int height) : public Event',
         functions: [
@@ -410,7 +410,7 @@ const DOCUMENTATION = [
     },
     /* WindowResizeEvent -------------- */
     {
-        class: 'WindowCloseEvent',
+        class: 'Window Close Event',
         description: 'An Event that gets called when the window closes.',
         class_code: 'class WindowCloseEvent : public Event',
         functions: [
@@ -420,7 +420,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* KeyEvent ----------------------- */
     {
-        class: 'KeyEvent',
+        class: 'Key Event',
         description: 'An Abstract Event Class that gets called whenever a key is pressed or released or repeated.',
         class_code: 'class KeyEvent : public Event',
         functions: [
@@ -436,7 +436,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* KeyPressedEvent ---------------- */
     {
-        class: 'KeyPressedEvent',
+        class: 'Key Pressed Event',
         description: 'An Event that gets called whenever a key is pressed or repeated.',
         class_code: 'class KeyPressedEvent(int keycode, int repeatCount) : KeyEvent(keycode)',
         functions: [
@@ -452,7 +452,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* KeyReleasedEvent --------------- */
     {
-        class: 'KeyReleasedEvent',
+        class: 'Key Released Event',
         description: 'An Event that gets called whenever a key is released.',
         class_code: 'class KeyReleasedEvent(int keycode) : KeyEvent(keycode)',
         functions: [
@@ -461,7 +461,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* MouseMovedEvent ---------------- */
     {
-        class: 'MouseMovedEvent',
+        class: 'Mouse Moved Event',
         description: 'An Event that gets called whenever the mouse cursor moves.',
         class_code: 'class MouseMovedEvent(float x, float y) : public Event',
         functions: [
@@ -484,7 +484,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* MouseScrolledEvent ------------- */
     {
-        class: 'MouseScrolledEvent',
+        class: 'Mouse Scrolled Event',
         description: 'An Event that gets called whenever the mouse scrolls.',
         class_code: 'class MouseScrolledEvent(float xOffset, float yOffset) : public Event',
         functions: [
@@ -507,7 +507,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* MouseButtonEvent --------------- */
     {
-        class: 'MouseButtonEvent',
+        class: 'Mouse Button Event',
         description: 'An Abstract Event Class that gets called whenever a mouse button is pressed or released.',
         class_code: 'class MouseButtonEvent : public Event',
         functions: [
@@ -523,7 +523,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* MouseButtonPressedEvent -------- */
     {
-        class: 'MouseButtonPressedEvent',
+        class: 'Mouse Button Pressed Event',
         description: 'An Abstract Event Class that gets called whenever a mouse button is pressed.',
         class_code: 'class MouseButtonPressedEvent(int button) : MouseButtonEvent(button)',
         functions: [
@@ -532,7 +532,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* MouseButtonReleasedEvent ------- */
     {
-        class: 'MouseButtonReleasedEvent',
+        class: 'Mouse Button Released Event',
         description: 'An Abstract Event Class that gets called whenever a mouse button is released.',
         class_code: 'class MouseButtonReleasedEvent(int button) : MouseButtonEvent(button)',
         functions: [
@@ -541,7 +541,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* EventDispatcher ---------------- */
     {
-        class: 'EventDispatcher',
+        class: 'Event Dispatcher',
         description: "Used to catch events when they fire. Mainly used in the OnEvent(Event& e) method to call a method on the event calling.",
         class_code: 'class EventDispatcher(Event& event)',
         functions: [
@@ -990,7 +990,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* ShaderProgram ------------------ */
     {
-        class: 'ShaderProgram',
+        class: 'Shader Program',
         description: "This class handles shaders loading, parsing and creation. It only works for GLSL now.",
         class_code: 'class ShaderProgram',
         functions: [
@@ -1087,7 +1087,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* SpriteBatch -------------------- */
     {
-        class: 'SpriteBatch',
+        class: 'Sprite Batch',
         description: "A Render Batch Class that allows the user to render images to the world. It is mainly built with the intent of minimizing draw calls as much as possible.",
         class_code: 'class SpriteBatch(const std::string& shaderPath = "Assets/default.shader")',
         functions: [
@@ -1159,7 +1159,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* ShapeBatch --------------------- */
     {
-        class: 'RenderBatch',
+        class: 'Render Batch',
         description: "A Render Batch Class that allows the user to render shapes to the world. It is mainly built with the intent of minimizing draw calls as much as possible.",
         class_code: "class RenderBatch(GLuint _offset, GLuint _numVerts, GLuint _textureID)",
         functions: [
@@ -1168,7 +1168,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* Glyph -------------------------- */
     {
-        class: 'ShapeBatch',
+        class: 'Shape Batch',
         description: "The rect that is mainly used by class SpriteBatch as a data holder for the drawing process.",
         class_code: "class ShapeBatch",
         functions: [
@@ -1222,7 +1222,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* FontBatch ---------------------- */
     {
-        class: 'FontBatch',
+        class: 'Font Batch',
         description: "A Wrapper class around SpriteBatch that decodes (.ttf) font types and draws them in the world.",
         class_code: "class FontBatch(const std::string& fontPath, const FontBatchSettings& fontBatchSettings = { 32.0f, 32.0f })",
         functions: [
@@ -1248,7 +1248,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* FontBatchSettings -------------- */
     {
-        class: 'FontBatchSettings',
+        class: 'Font Batch Settings',
         description: "Properties of the decoded fonts, for now only (font size, line height).",
         class_code: "struct FontBatchSettings { float fontSize; float lineHeight; }",
         functions: [
@@ -1257,7 +1257,7 @@ const DOCUMENTATION = [
     /* -------------------------------- */
     /* CharGlyph -------------- */
     {
-        class: 'CharGlyph',
+        class: 'Char Glyph',
         description: "Settings struct that determine how to draw each character unto the screen, They're automatically assigned when first creating a FontBatch object.",
         class_code: "struct CharGlyph { GLuint textureID; glm::ivec2 size; glm::ivec2 bearing; unsigned int advance; }",
         functions: [
@@ -1265,84 +1265,3 @@ const DOCUMENTATION = [
     },
     /* -------------------------------- */
 ]
-
-function GetDocID(name) {
-    for(let i = 0; i < DOCUMENTATION.length; i++){
-        if(DOCUMENTATION[i].class == name){
-            return i;
-        }
-    }
-}
-
-let docIndex = JSON.parse(localStorage.getItem('DocIndex'));
-
-function FillInformation(info_object){
-    const CLASS_HEADER = document.querySelector('#class-name');
-    CLASS_HEADER.textContent = info_object.class;
-
-    const CLASS_DESCRIPTION = document.querySelector('#class-description');
-    CLASS_DESCRIPTION.textContent = info_object.description;
-
-    const CLASS_CODE = document.querySelector('#class-code');
-    CLASS_CODE.textContent = info_object.class_code;
-
-    const FUNCTIONS = document.querySelector('.functions');
-    /*
-    <div class="function">
-          <pre class="prettyprint code-block">void</pre>
-          <ul>
-            <li>parameter1</li>
-            <li>parameter2</li>
-          </ul>
-          <p>function description</p>
-        </div>
-    */
-    for(let i = 0; i < info_object.functions.length; i++){
-        const FUNCTION = document.createElement('div');
-        FUNCTION.classList.add('function');
-        FUNCTIONS.appendChild(FUNCTION);
-
-        const FUNCTION_CODE = document.createElement('pre');
-        FUNCTION_CODE.classList.add('code-block');
-        FUNCTION_CODE.classList.add('prettyprint');
-        FUNCTION_CODE.textContent = info_object.functions[i].function_code;
-        FUNCTION.appendChild(FUNCTION_CODE);
-
-        const PARAMETER_LIST = document.createElement('ul');
-        FUNCTION.appendChild(PARAMETER_LIST);
-        for(let j = 0; j < info_object.functions[i].function_parameters.length; j++){
-            const PARAMETER = document.createElement('li');
-            PARAMETER.textContent = info_object.functions[i].function_parameters[j];
-            PARAMETER_LIST.appendChild(PARAMETER);
-        }
-
-        const FUNCTION_DESCRIPTION = document.createElement('p');
-        FUNCTION_DESCRIPTION.textContent = info_object.functions[i].function_description;
-        FUNCTION.appendChild(FUNCTION_DESCRIPTION);
-    }
-
-    const PREVIOUS_BUTTON = document.querySelector('#previous-button');
-    
-    if(docIndex == 0) {
-        PREVIOUS_BUTTON.setAttribute('href', './example.html');
-    }else {
-        PREVIOUS_BUTTON.setAttribute('href', './documentation.html');
-        PREVIOUS_BUTTON.textContent = DOCUMENTATION[docIndex - 1].class;
-        PREVIOUS_BUTTON.addEventListener('click', ()=>{
-        localStorage.setItem('DocIndex', docIndex - 1);
-        });
-    }
-    
-    const NEXT_BUTTON = document.querySelector('#next-button');
-    if(docIndex == DOCUMENTATION.length - 1) {
-        NEXT_BUTTON.style.display = 'none';
-    }else {
-        NEXT_BUTTON.setAttribute('href', './documentation.html');
-        NEXT_BUTTON.textContent = DOCUMENTATION[docIndex + 1].class;
-        NEXT_BUTTON.addEventListener('click', ()=>{
-            localStorage.setItem('DocIndex', docIndex + 1);
-        });
-    }
-}
-
-FillInformation(DOCUMENTATION[docIndex]);

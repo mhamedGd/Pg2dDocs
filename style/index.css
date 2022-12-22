@@ -41,6 +41,7 @@ code {
     .headline {
         display: grid;
         width: 100vw;
+        padding: 0;
         grid-template-columns: 0.6fr;
         justify-content: center;
     }
