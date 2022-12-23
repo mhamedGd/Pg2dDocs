@@ -63,13 +63,60 @@ function CreateNavBar(){
     BURGER_LINE3.classList.add('burger-line');
     BURGER_BUTTON.appendChild(BURGER_LINE3);
 
+
+    // CREATING THE DOCS MENU
     const DOCS_MENU = document.createElement('div');
     DOCS_MENU.classList.add('docs-menu');
     document.querySelector('body').appendChild(DOCS_MENU);
+
+    const DOCS_LIST = document.createElement('ul');
+    DOCS_MENU.appendChild(DOCS_LIST);
+
+    // Installation List Item
+    const INSTALLATION_LIST_ITEM = document.createElement('li');        
+    const INSTALLATION_ITEM_LINK = document.createElement('a');
+    INSTALLATION_ITEM_LINK.textContent = "Installation";
+    INSTALLATION_ITEM_LINK.setAttribute('href', './index.html');
+    INSTALLATION_LIST_ITEM.appendChild(INSTALLATION_ITEM_LINK);
+    DOCS_LIST.appendChild(INSTALLATION_LIST_ITEM);
+    // --------------------------
+    
+    const LINE = document.createElement('hr');
+    INSTALLATION_LIST_ITEM.appendChild(LINE);
+    
+    // Example List Item
+    const EXAMPLE_LIST_ITEM = document.createElement('li');        
+    const EXAMPLE_ITEM_LINK = document.createElement('a');
+    EXAMPLE_ITEM_LINK.textContent = "Example";
+    EXAMPLE_ITEM_LINK.setAttribute('href', './example.html');
+    EXAMPLE_ITEM_LINK.addEventListener('click', () => {
+        localStorage.setItem('DocIndex', JSON.stringify(0));
+    });
+    EXAMPLE_LIST_ITEM.appendChild(EXAMPLE_ITEM_LINK);
+    DOCS_LIST.appendChild(EXAMPLE_LIST_ITEM);
+    // --------------------------
+    
+    const LINE2 = document.createElement('hr');
+    EXAMPLE_LIST_ITEM.appendChild(LINE2);
+
+    // Documentation List Items
+    for(let i = 0; i < DOCUMENTATION.length; i++) {
+        const DOCS_LIST_ITEM = document.createElement('li');
+
+        const DOCS_ITEM_LINK = document.createElement('a');
+        DOCS_ITEM_LINK.textContent = DOCUMENTATION[i].class;
+        DOCS_ITEM_LINK.setAttribute('href', './documentation.html');
+        DOCS_ITEM_LINK.addEventListener('click', () => {
+            localStorage.setItem('DocIndex', JSON.stringify(i));
+        });
+        DOCS_LIST_ITEM.appendChild(DOCS_ITEM_LINK);
+        DOCS_LIST.appendChild(DOCS_LIST_ITEM);
+    }
+    // --------------------------
 }
 
 function CreateDocsInfo() {
-
+    
 }
 
 CreateNavBar();

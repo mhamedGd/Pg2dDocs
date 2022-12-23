@@ -118,20 +118,35 @@ hr {
 }
 
 .docs-menu {
-    transition: var(--transition-time);
     position: fixed;
     transform: translate(100vw, 0);
+    z-index: -1;
 }
 
 .docs-menu.active {
+    direction:rtl;
     overflow-y: scroll;
-    display: block;
     transform: translate(0, 0);
+    z-index: 3;
     width: 100vw;
     height: calc(100vh - 50px);
     background: white;
     border-left: 4px solid black;
     top: 50px;
+}
+
+.docs-menu ul {
+    direction:ltr;
+    list-style: circle;
+}
+
+.docs-menu li {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.docs-menu a {
+    font-size: 24px;
 }
 
 .last-button-container {
@@ -168,5 +183,9 @@ hr {
         border-left: 3px solid black;
         top: 60px;
         right: 0;
+    }
+
+    .docs-menu a {
+        font-size: 18px;
     }
 }
