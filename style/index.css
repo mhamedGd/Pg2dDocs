@@ -1,7 +1,12 @@
 .headline {
-    margin-top: 12vh;
+    margin-top: -16vh;
     width: 90vw;
     padding: 0 10px;
+}
+
+.logo {
+    width: 327px;
+    height: auto;
 }
 
 .headline h1 {
@@ -44,5 +49,9 @@ code {
         padding: 0;
         grid-template-columns: 0.6fr;
         justify-content: center;
+    }
+
+    .logo {
+        width: 512px;
     }
 }
